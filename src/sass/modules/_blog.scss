@@ -1,0 +1,101 @@
+.blog {
+  @include media(911px) {
+    padding: 30px 15px;
+  }
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    @include media(991px) {
+      flex-direction: column;
+    }
+  }
+  &__col {
+    &.shadow {
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    }
+    width: calc((100% - 15px) / 2);
+    @include media(991px) {
+      width: 100%;
+    }
+  }
+  &__img {
+    max-height: 460px;
+    img {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      @include media(768px) {
+        height: auto;
+      }
+    }
+  }
+  .img-footer {
+    padding: 30px 50px 50px 50px;
+    border-bottom: 3px solid $red;
+    background-color: #fff;
+    @include media(767px) {
+      padding: 15px;
+    }
+    &__title {
+      font-weight: 500;
+      font-size: 20px;
+      margin-bottom: 20px;
+      line-height: 25px;
+      color: $colorNav;
+    }
+    &__text {
+      color: #616161;
+      font-size: 15px;
+      line-height: 30px;
+    }
+  }
+  .box {
+    padding: 39px 30px 39px 30px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    @include media(767px) {
+      padding:  15px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &.green {
+      border-bottom: 3px solid $green;
+    }
+    &.purpure {
+      border-bottom: 3px solid $purpure;
+    }
+    &.yellow {
+      border-bottom: 3px solid $yellow;
+    }
+    &__title {
+      font-weight: 500;
+      font-size: 18px;
+      margin-bottom: 25px;
+      line-height: 25px;
+      color: $colorNav;
+    }
+    &__text {
+      color: #616161;
+      font-size: 15px;
+      line-height: 30px;
+      @include media(767px) {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+    &__link {
+      &.green {
+       color: $green;
+      }
+      &.purpure {
+        color: $purpure;
+      }
+      &.yellow {
+        color: $yellow;
+      }
+    }
+  }
+}

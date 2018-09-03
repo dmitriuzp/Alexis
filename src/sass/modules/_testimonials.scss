@@ -1,0 +1,88 @@
+.testimonials {
+  background-color: $gray3;
+  padding: 80px 15px;
+  .sectionTitle {
+    color: $white;
+  }
+  .sub-text {
+    color: $white;
+  }
+  .slider {
+    margin-top: 80px;
+    &__row {
+      display: flex;
+      align-items: center;
+    }
+    &__img {
+      max-width: 380px;
+      height: 380px;
+      width: 100%;
+      border: 5px solid #fff;
+      border-radius: 3px;
+      img {
+        object-fit: cover;
+        height: 100%;
+        max-width: 380px;
+        max-height: 380px;
+      }
+    }
+    &__content {
+      position: relative;
+      background-color: #fff;
+      padding: 40px 60px;
+      width: 100%;
+      border-bottom: 3px solid $red;
+    }
+    &__text {
+      position: relative;
+      font-size: 14px;
+      color: $gray2;
+      line-height: 25px;
+      margin-bottom: 40px;
+    }
+    &__author {
+      font-size: 18px;
+      color: black;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    &__sub-author {
+      color: $red;
+      font-size: 12px;
+    }
+    &__svg {
+      font-size: 46px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0.4;
+      width: 179px;
+      height: 124px;
+      z-index: 0;
+    }
+    .owl-dots {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      .owl-dot {
+        height: 18px;
+        margin: 0 5px;
+        &.active {
+          span {
+            border-color: $red;
+            transition: 0.3s;
+          }
+        }
+        span {
+          display: block;
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          border: 2px solid #fff;
+        }
+      }
+    }
+  }
+}

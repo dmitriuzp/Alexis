@@ -1,0 +1,27 @@
+/*---OWL-CAROUSEL---*/
+@import '../vendor/Animate/animate';
+@import '../vendor/owl-carousel/owl.carousel.min';
+/*---BASE---*/
+@import './base/_variables.scss';
+@import './base/_mixins.scss';
+@import './base/_base';
+
+/*---LAUOUTS---*/
+@import './layouts/_header.scss';
+@import './layouts/_footer.scss';
+
+/*-----MODULES-----*/
+@import './modules/_firstSection.scss';
+@import './modules/_about-us.scss';
+@import './modules/_focus.scss';
+@import './modules/_video.scss';
+@import './modules/_portfolio.scss';
+@import './modules/_work.scss';
+@import './modules/_pricing.scss';
+@import './modules/_testimonials.scss';
+@import './modules/_select-us.scss';
+@import './modules/_team.scss';
+@import './modules/statistic.scss';
+@import './modules/_work-experience.scss';
+@import './modules/_blog.scss';
+@import './modules/_sidebar.scss';

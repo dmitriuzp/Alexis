@@ -1,0 +1,83 @@
+@mixin size($size, $color) {
+  font-size: $size;
+  color: $color;
+}
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #3f4049;
+  width: 270px;
+  height: 100%;
+  z-index: 2;
+  transition: 0.3s;
+  transform: translateX(-100%);
+  &.open {
+    transform: translateX(0%);
+  }
+  &__close {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    border: none;
+    outline: none;
+    display: block;
+    background: none;
+    z-index: 1;
+    cursor: pointer;
+    i {
+      font-size: 24px;
+      color: $red;
+    }
+  }
+  &__head {
+    min-height: 200px;
+    position: relative;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-bottom: 2px solid #b3b3b3;
+    .name {
+      color: #fff;
+      @include size(32px, #fff);
+      margin-bottom: 15px;
+    }
+    .position {
+      color: #fff;
+      @include size(16px, #fff);
+    }
+  }
+  &__nav {
+    .nav-item {
+      border-bottom: 1px solid #242431;
+      padding: 20px;
+      display: block;
+      color: #fff;
+    }
+  }
+  .input {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    input {
+      display: none;
+      width: 20px;
+      height: 20px;
+      outline: none;
+    }
+    span {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px solid red;
+      border-radius: 3px;
+    }
+    input:checked + span {
+      background: red;
+    }
+  }
+}
